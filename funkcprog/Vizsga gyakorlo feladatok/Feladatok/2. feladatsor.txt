@@ -1,0 +1,20 @@
+whichIsEmpty :: [a] -> [b] -> Maybe Int
+Kapsz két listát. Ha csak az első üres, add vissza: Just 1. Ha csak a második üres, add vissza: Just 2. Minden más esetben (ha mindkettő üres, vagy egyik sem) az eredmény legyen Nothing!
+
+match :: Eq a => (a,a) -> (a, a) -> Bool
+Vizsgáld meg, hogy két megadott párnak van-e legalább egy olyan eleme, ami mindkettőben (bármelyik pozíción) szerepel!
+
+indicesOfEmpties :: Eq a => [[a]] -> [Int]
+Egy listákból álló listában keresd meg azokat a belső listákat, amelyek üresek, és add vissza ezeknek az 1-től kezdődő sorszámát (indexét)!
+
+applyOnWords :: (String -> String) -> String -> String
+Írj egy függvényt, amely egy kapott szöveget szavakra bont, minden egyes szóra alkalmaz egy megadott átalakító függvényt, majd a módosított szavakat egyetlen, szóközökkel elválasztott szöveggé fűzi össze!
+
+restUntil :: (a -> [a] -> Bool) -> [a] -> [a]
+Dobj el elemeket egy lista elejéről egészen addig, amíg egy speciális feltétel igazzá nem válik, majd add vissza a maradék listát! A feltételvizsgáló függvény paraméterként megkapja az éppen vizsgált elemet, és a lista utána következő részét is.
+
+replaceAll :: Eq a => a -> [a] -> a -> [a]
+Cseréld le egy lista összes megadott elemét (első paraméter) egy új, megadott elemre (harmadik paraméter)!
+
+listWordsWithUpper :: String -> [String]
+Válogasd ki egy szövegből azokat a szavakat, amelyek tartalmaznak legalább egy nagybetűt, és add vissza őket egy listában!

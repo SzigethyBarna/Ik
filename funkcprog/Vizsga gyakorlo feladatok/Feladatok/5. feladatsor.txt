@@ -1,0 +1,59 @@
+splitOnZero :: [Int] -> [[Int]]
+Darabolj fel egy számlistát ott, ahol 0 szerepel benne! Az eredmény egy listákból álló lista legyen, amelyben az eredeti 0-k már nem szerepelnek.
+
+safeDivList :: [Int] -> [Int] -> [Maybe Int]
+Oszd el két lista elemeit egymással, index szerint párosítva! Ha egy osztásnál az osztó 0, az eredmény abban a pozícióban legyen Nothing, egyébként Just (hányados).
+
+localMaxima :: [Int] -> [Int]
+Keresd meg egy számlistában a lokális maximumokat! Egy elem akkor lokális maximum, ha szigorúan nagyobb, mint a közvetlenül előtte ÉS a közvetlenül utána álló elem.
+
+interleave :: [a] -> [a] -> [a]
+Fésülj össze két listát felváltva: egy elem az elsőből, egy a másodikból, és így tovább, amíg valamelyik el nem fogy! A maradékot egyszerűen fűzd a végére.
+
+finalPosition :: [Move] -> (Int, Int)
+Egy robot a (0,0) koordinátáról indul. Kiszámolandó a végső pozíciója egy mozgásutasításokat (Up, Down, Left, Right) tartalmazó lista végrehajtása után!
+
+groupBySign :: [Int] -> [[Int]]
+Csoportosítsd egy lista elemeit belső listákba úgy, hogy az egymás után következő, azonos előjelű számok egy közös listába kerüljenek! A 0 a feladat szempontjából pozitívnak tekintendő.
+
+simpleCalc :: [Op] -> Int
+A matematikai műveleteket leíró Op adattípus (Plus x, Minus x, Times x) elemeit hajtsd végre sorban egy listán, a 0 kezdőértékből kiindulva!
+
+mergeSorted :: [Int] -> [Int] -> [Int]
+Kapsz két (feltételezhetően már növekvő sorrendben lévő) listát. Fésüld őket össze egyetlen, szintén növekvő sorrendben lévő listává!
+
+replaceIndices :: String -> [Int] -> Char -> String
+Egy szövegben cseréld le mindazokat a karaktereket a megadott új karakterre, amelyek indexe (0-tól kezdve) szerepel a paraméterként kapott index-listában!
+
+dropEveryKth :: [a] -> Int -> [a]
+Dobj el egy listából minden k-adik elemet (ahol k a második paraméter)!
+
+expandList :: [(Int, a)] -> [a]
+Fejtsd vissza a tömörített listát: a bemenet (Darabszám, Elem) párokból áll, az eredménylistában pedig minden elemet a hozzá tartozó darabszámszor kell megismételni egymás után!
+
+isSubsequence :: (Eq a) => [a] -> [a] -> Bool
+Döntsd el egy listáról, hogy részsorozata-e egy másiknak! A karakteres verzióhoz hasonlóan itt is az a szabály, hogy az elemeknek a megfelelő sorrendben kell követniük egymást a második listában, de nem feltétlenül egybefüggően.
+
+checkParentheses :: String -> Bool
+Vizsgáld meg, hogy egy szövegben hibátlan-e a zárójelezés! Csak a kerek zárójeleket () kell figyelni: minden nyitóhoz kell lennie egy zárónak, és sosem lehet hamarabb bezárni egyet, mint ahogy kinyitottad.
+
+sumOddNodes :: Tree -> Int
+Egy egész számokat tartalmazó bináris fában (Tree) add össze az összes páratlan értékű elemet (függetlenül attól, hogy az egy csomópont vagy egy levél)!
+
+mapMaybeIndex :: (Int -> a -> Maybe b) -> [a] -> [b]
+Alkalmazz egy átalakító függvényt egy lista elemein, amely az aktuális elem értékén kívül a (0-tól induló) indexét is felhasználja! Csak a Just-ot adó eredményeket tartsd meg, a Nothing-okat dobd el!
+
+treeMax :: Tree -> Int
+Keresd meg és add vissza a legnagyobb számot egy bináris fában (Tree)!
+
+mirrorTree :: Tree -> Tree
+Tükrözz egy bináris fát! Minden egyes csomópontnál cseréld fel a bal és a jobb oldali részfát!
+
+splitOnComma :: String -> [String]
+Darabolj fel egy szöveget vesszők (,) mentén! Az eredmény a szavak (sztringek) listája legyen, vesszők nélkül.
+
+collectLeaves :: Tree -> [Int]
+Gyűjtsd ki egy bináris fa összes levelének (Leaf) értékét, és add vissza őket egyetlen listában!
+
+safeIndex :: [a] -> Int -> Maybe a
+Készíts egy biztonságos indexelő függvényt! Keresd ki a lista megadott (0-tól induló) indexén álló elemét. Ha az index túl kicsi vagy túl nagy, a program összeomlás helyett adjon vissza Nothing-ot!

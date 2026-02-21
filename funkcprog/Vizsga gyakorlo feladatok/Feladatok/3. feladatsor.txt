@@ -1,0 +1,20 @@
+onlyEvens :: Integral a => [a] -> [a]
+Tartsd meg egy listából kizárólag a páros számokat!
+
+countWordsWith :: Char -> String -> Int
+Számold meg, hogy egy megadott szövegben hány olyan szó található, amely tartalmazza a paraméterként kapott karaktert!
+
+takeWhile' :: (a -> Bool) -> [a] -> [a]
+Implementáld újra a beépített takeWhile függvényt! Az eredmény listába addig vedd fel az eredeti lista elemeit az elejéről haladva, amíg a megadott feltétel igaz rájuk. Amint találsz egy elemet, amire hamis, állj meg!
+
+firstGreater :: Ord a => a -> [a] -> Maybe a
+Keresd meg egy listában az első olyan elemet, amely szigorúan nagyobb a megadott számnál, és add vissza Just-ba csomagolva! Ha nincs ilyen elem, add vissza a Nothing értéket!
+
+wordLengths :: String -> [Int]
+Számold ki egy szöveg összes szavának a hosszát, és add vissza ezeket az értékeket egy listában!
+
+everySecond :: [a] -> [a]
+Készíts egy függvényt, ami csak a lista minden második (azaz a 2., 4., 6., stb.) elemét tartja meg!
+
+removeEmpties :: [[a]] -> [[a]]
+Távolítsd el a listák listájából azokat a belső listákat, amelyek teljesen üresek!

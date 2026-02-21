@@ -1,0 +1,68 @@
+deepestLake :: [Hely] -> Maybe Double
+Adott egy Hely típus (Lake mélység, Mountain magasság, Cave mélység). Keresd meg a listában szereplő tavak (Lake) közül a legmélyebbet, és add vissza a mélységét Just-ban! Ha nincs egyetlen tó sem, adj Nothing-ot!
+
+maxOfMaybes :: [Maybe Int] -> Int
+Adott egy Maybe Int-eket tartalmazó lista. Keresd meg és add vissza a legnagyobbat a Just-ba csomagolt értékek közül! (Feltételezheted, hogy van legalább egy Just a listában).
+
+duplazMasodik :: [[a]] -> [[a]]
+Kapsz egy listákból álló listát. Minden olyan belső listának, amiben van legalább két elem, duplázd meg a második elemét (azaz szúrd be még egyszer közvetlenül utána)! A 0 vagy 1 elemű listákat hagyd változatlanul!
+
+dropUntil :: ([a] -> Bool) -> [a] -> [a]
+Hagyj el elemeket a lista elejéről addig, amíg egy feltétel igazzá nem válik. A feltételvizsgáló függvény a teljes aktuális maradék listát kapja meg bemenetként, nem csak egyetlen elemet!
+
+canBeFactorised :: [Int] -> [[Int]]
+Írj egy függvényt, amely egy számokból álló lista minden elemének elkészíti a prímtényezős felbontását! Az eredmény egy listákból álló lista legyen.
+
+sumEvenJusts :: [Maybe Int] -> Int
+Egy Maybe Int listából válogasd ki a Just-ban lévő, páros számokat, és add vissza az összegüket!
+
+doubleOrDrop :: [Int] -> [Int]
+Megy végig egy számlistán: a páros számokat dobd el teljesen, a páratlan számokat pedig szorozd meg kettővel az eredménylistában!
+
+elementIsAt :: [a] -> Int -> Bool
+Döntsd el biztonságosan (kivétel dobása nélkül), hogy egy listának létezik-e eleme a megadott (0-tól kezdődő) indexen!
+
+swapAll :: [(a,b)] -> [(b,a)]
+Egy párokból álló lista minden egyes elemében cseréld fel a pár bal és jobb oldalát!
+
+safeAdd :: Maybe Int -> Maybe Int -> Maybe Int
+Készíts egy biztonságos összeadás függvényt! Két Maybe Int értéket kell összeadnia. Csak akkor adjon vissza Just (összeg)-et, ha mindkét bemenet érvényes szám (Just). Bármilyen más esetben Nothing a válasz.
+
+countTrue :: [Bool] -> Int
+Számold meg, hányszor szerepel a True érték egy logikai listában!
+
+onlyCapitals :: String -> String
+Egy szövegből szűrj ki minden karaktert, ami nem az angol ábécé nagybetűje ('A'-tól 'Z'-ig)!
+
+everySecond :: [a] -> [a]
+Készíts egy függvényt, ami csak a lista minden páratlan sorszámú (azaz az 1., 3., 5., stb.) elemét tartja meg!
+
+processGrades :: [(String, Maybe Int)] -> [String]
+A bemenet (Név, Jegy) párok listája, ahol a jegy egy Maybe Int. Add vissza egy listában azoknak a nevét, akik 1-esnél jobb jegyet kaptak! Kivétel: Ha bárkinek a listában Nothing a jegye, az egész függvény azonnal adjon vissza egy teljesen üres listát!
+
+zipWithPadding :: [Int] -> [Int] -> [Int]
+Adj össze két számlistát elemenként (mint a zipWith (+)). Azonban ha az egyik lista rövidebb, a hosszabb lista kimaradó elemeit változtatás nélkül fűzd hozzá a végeredmény végéhez!
+
+longestRising :: [Int] -> Int
+Keresd meg egy számlistában a leghosszabb, szigorúan monoton növekvő, egybefüggő részlista hosszát!
+
+transformNested :: [[Int]] -> [[Int]]
+Egy listákból álló listában vizsgáld meg a belső listák összegeit! Csak azokat a belső listákat tartsd meg, amelyek elemeinek összege páros, majd ezeknek a megtartott listáknak minden egyes elemét szorozd meg 10-zel!
+
+findFirstValid :: [Maybe a] -> (a -> Bool) -> Maybe a
+Egy Maybe értékeket tartalmazó listában keresd meg az első olyan Just értéket, amelynek a tartalmára igaz a megadott feltétel! Ha megvan, add vissza ezt a Just értéket, ha nincs (vagy csak Nothing-ok vannak), akkor a válasz Nothing!
+
+applyToKey :: String -> (Int -> Int) -> [(String, Int)] -> Maybe Int
+Egy szótárszerű (Kulcs, Érték) listában keresd meg a megadott szöveges kulcsot! Ha megtalálod, alkalmazd a kapott függvényt a hozzá tartozó értékre, és add vissza az eredményt Just-ba csomagolva!
+
+alternatingSum :: [Int] -> Int
+Számítsd ki egy lista elemeinek váltakozó összegét úgy, hogy a szomszédos párokat kivonod egymásból, majd ezeket az eredményeket összeadod! (Pl. [a,b,c,d] esetén a képlet: (a-b) + (c-d)).
+
+safeUpdate :: [a] -> Int -> a -> [a]
+Cseréld le a lista megadott (0-tól indexelt) pozícióján lévő elemet a paraméterként kapott új elemre! Ha az index érvénytelen (túlmutat a listán), add vissza az eredeti listát módosítás nélkül!
+
+compress :: String -> [(Char, Int)]
+Tömöríts egy szöveget Run-length encoding (RLE) módszerrel! Az egymást követő azonos karaktereket alakítsd át (Karakter, Darabszám) párokká (pl. "aaab" -> [('a', 3), ('b', 1)])!
+
+mergeJusts :: [String] -> [Maybe Int] -> [(String, Int)]
+Kapsz egy nevek és egy jegyek (Maybe Int) listáját. Fésüld őket össze (Név, Jegy) párokká elemenként, de azokat a diákokat, akiknek a jegye Nothing, hagyd ki a végeredményből!

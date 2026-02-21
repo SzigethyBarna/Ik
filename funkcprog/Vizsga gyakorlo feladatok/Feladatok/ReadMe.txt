@@ -1,0 +1,2 @@
+Az 5 txt fajlban talalhatóak az általam gyűjtött, illetve külön a vizsgára készített feladatok, változó, hogy egy-egy fájlba mennyi feladatot tettem be. A feladatok a Funkcprog vizsgára épülnek, azonos nehézségi szineten, pár feladat kicsit még nehezebb is mint amivel a vizsgán találkozhattok.
+Jó készülést!

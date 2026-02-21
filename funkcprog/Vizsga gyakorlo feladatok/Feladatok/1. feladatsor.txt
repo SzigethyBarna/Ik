@@ -1,0 +1,23 @@
+ryuksApples :: Garden -> Int
+Írj egy függvényt, amely kiszámolja, hány megehető alma van egy egész kertben! A kert fák listája, egy fa pedig almák listája, ahol egy almát a (Bool, Int) pár ír le (érett-e, illetve milyen magasan van). Csak azokat az almákat számold bele a végeredménybe, amelyek érettek (True) és a magasságuk legfeljebb 3!(segitseg: készits segéd függvényt)
+
+points :: Integral a => [(String, a, a)] -> [(String, a)]
+Készíts egy pontszámító programot diákoknak! A bemenet (Név, Idő, Hiba) hármasok listája. A végső pontszámot a 100 - (Idő div 2) - Hiba képlettel számold ki! Az eredménybe csak a nevek és a végső pontszámok kerüljenek bele. Kivétel: Ha valakinek a hibapontja pontosan 100, vagy a végső pontszáma 0 (esetleg negatív), őt teljesen hagyd ki az eredménylistából!
+
+doesContain :: String -> String -> Bool
+Döntsd el, hogy az elsőként kapott szöveg részsorozata-e a másodiknak! A karaktereknek a megfelelő sorrendben kell szerepelniük a második szövegben, de nem kötelező, hogy közvetlenül egymás mellett legyenek.
+
+barbie :: [String] -> String
+Barbie ruhát választ a szekrényből (színek listája). A preferenciája a következő: ha van a listában "rozsaszin", akkor azt veszi fel. Ha nincs, akkor sorban megnézi a ruhákat, és kiválasztja az első olyan páros sorszámú (1-től kezdve a számolást) ruhát, aminek a színe nem "fekete". Ha egyik feltétel sem teljesül, az eredmény legyen "farmer"!
+
+firstValid :: [a -> Bool] -> a -> Maybe Int
+Kapsz egy feltételvizsgáló függvényekből álló listát és egy konkrét értéket. Keresd meg az első olyan függvényt a listában, ami erre az értékre True-t ad, és add vissza ennek a függvénynek a (0-tól kezdődő) indexét Just-ba csomagolva! Ha egyik függvény sem ad igazat, az eredmény legyen Nothing!
+
+combineListsIf :: (a -> b -> Bool) -> (a -> b -> c) -> [a] -> [b] -> [c]
+Írj egy egyedi lista-összefűző (zip) függvényt! Kapsz egy logikai feltételt, egy kombináló függvényt és két listát. Csak azokra az azonos indexen lévő elempárokra alkalmazd a kombináló függvényt (és tedd be az eredményt a kimeneti listába), amelyekre a logikai feltétel True-t ad!
+
+whichBusStop :: String -> [Line] -> [Integer]
+Egy tömegközlekedési hálózat járatait a Line adattípus (Tram járat_szám megállók vagy Bus járat_szám megállók) írja le. Keresd ki az összes olyan Busz járatszámát, amely megáll a paraméterként kapott megállóban! A villamosokat hagyd figyelmen kívül!
+
+isReservable :: Int -> String -> Bool
+Egy mozisor foglaltságát egy szöveg írja le, ahol az 'x' a foglalt hely, minden más karakter szabad hely. Döntsd el, hogy van-e a sorban legalább n darab egymást követő szabad hely!
