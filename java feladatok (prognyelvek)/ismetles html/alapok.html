@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Végső Komplett Java ZH Útmutató 🚀</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            padding: 10px;
+            margin: 0;
+        }
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        h1 {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            font-size: 20px;
+            padding: 12px;
+            margin: -15px -15px 20px -15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 16px;
+            margin-top: 25px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 3px;
+            text-transform: uppercase;
+        }
+        h3 {
+            color: #16a085;
+            font-size: 14px;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #dcdde1;
+            padding: 6px 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) { background-color: #f8f9fa; }
+        code {
+            background-color: #f1f2f6;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #c0392b;
+            font-size: 13px;
+        }
+        pre {
+            background-color: #2f3640;
+            color: #f5f6fa;
+            padding: 8px 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+        .danger {
+            background-color: #fde8e7;
+            border-left: 5px solid #e74c3c;
+            padding: 8px 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .danger h4 { margin: 0 0 3px 0; color: #c0392b; font-size: 14px; }
+        .success {
+            background-color: #e8f8f5;
+            border-left: 5px solid #2ecc71;
+            padding: 8px 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .success h4 { margin: 0 0 3px 0; color: #16a085; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>MINDEN ALAPANYAG A JAVA ZH-HOZ 🎯</h1>
+
+    <h2>1. AZ ADATSZERKEZETEK SZINTTAXIS-TÁBLÁZATA</h2>
+    <p>Figyeld a List és ArrayList azonosságait, és a Tömb makacs különbségeit!</p>
+    
+    <table>
+        <tr>
+            <th>Művelet</th>
+            <th>Tömb (Array) 📦</th>
+            <th>List / ArrayList 📋</th>
+            <th>HashSet 🎟️</th>
+            <th>HashMap 📖</th>
+        </tr>
+        <tr>
+            <td><b>Létrehozás</b></td>
+            <td><code>new Típus[méret];</code></td>
+            <td><code>new ArrayList&lt;&gt;();</code></td>
+            <td><code>new HashSet&lt;&gt;();</code></td>
+            <td><code>new HashMap&lt;&gt;();</code></td>
+        </tr>
+        <tr>
+            <td><b>Hossz/Méret</b></td>
+            <td><code>.length</code> <small>(nincs ())</small></td>
+            <td><code>.size()</code></td>
+            <td><code>.size()</code></td>
+            <td><code>.size()</code></td>
+        </tr>
+        <tr>
+            <td><b>Elem elérése</b></td>
+            <td><code>asd[i]</code></td>
+            <td><code>asd.get(i)</code></td>
+            <td>❌ Nincs index!</td>
+            <td><code>asd.get(kulcs)</code></td>
+        </tr>
+        <tr>
+            <td><b>Beszúrás</b></td>
+            <td><code>asd[i] = elem;</code></td>
+            <td><code>asd.add(elem);</code></td>
+            <td><code>asd.add(elem);</code></td>
+            <td><code>asd.put(k, v);</code></td>
+        </tr>
+        <tr>
+            <td><b>Módosítás</b></td>
+            <td><code>asd[i] = új;</code></td>
+            <td><code>asd.set(i, új);</code></td>
+            <td>❌ Nem módosítható</td>
+            <td><code>asd.put(k, új);</code></td>
+        </tr>
+        <tr>
+            <td><b>Létezés csekk</b></td>
+            <td>Ciklussal kell!</td>
+            <td><code>asd.contains(x)</code></td>
+            <td><code>asd.contains(x)</code></td>
+            <td><code>asd.containsKey(k)</code></td>
+        </tr>
+    </table>
+
+    <h2>2. RÉSZLETES ÚTMUTATÓ ÉS RENDELTETÉS</h2>
+
+    <h3>A) Sima Tömb (Array) 📦</h3>
+    <p><b>Mikor látod?</b> A vizsgafeladatok metódusai/konstruktorai szinte mindig tömböt kapnak paraméterként (pl. <code>BaseSpell[] list</code>).</p>
+    <ul>
+        <li>Fix méretű, nem lehet hozzáadni elemet, csak a meglévő indexekre pakolni!</li>
+        <li>Túlindexelés hiba: <code>ArrayIndexOutOfBoundsException</code> (pl. ha a tömb 3 elemű, és te a <code>parts[3]</code>-at kéred).</li>
+    </ul>
+
+    <h3>B) List vs. ArrayList (Az Interfész és a Megvalósítás) 📋</h3>
+    <p> A <code>List</code> egy **Interfész** (egy elméleti tervrajz), az <code>ArrayList</code> pedig a **Konkrét Osztály**, ami megvalósítja ezt a tervrajzot.</p>
+    <ul>
+        <li><b>A szabály:</b> Típusként (bal oldalon) nyugodtan használhatod a sima <code>List</code>-et, de példányosítani (jobb oldalon) csak a konkrét <code>ArrayList</code>-et szabad!</li>
+        <li>Megengedi a duplikációt és megőrzi a sorrendet. Elem elérése mindig: <code>lista.get(i)</code>.</li>
+    </ul>
+
+    <h3>C) HashSet (Az Egyedi VIP Halmaz) 🎟️</h3>
+    <p><b>Mikor használod?</b> Ha a feladat kiköti: <i>"csak az egyedi elemek"</i>, vagy <i>"duplikáció kiszűrése"</i>.</p>
+    <ul>
+        <li>Kiszűri a duplikációt. Ha kétszer adod hozzá ugyanazt, a második <code>.add()</code>-ot némán figyelmen kívül hagyja.</li>
+        <li><b>SZIGORÚAN TILOS</b> az <code>asd.get(i)</code> vagy <code>asd[i]</code>! Csak <code>for-each</code> ciklussal tudsz végigmenni rajta:
+<pre><code>for (String nev : nevekHashSet) {
+    System.out.println(nev);
+}</code></pre>
+        </li>
+    </ul>
+
+    <h3>D) HashMap (A Kulcs-Érték Szótár) 📖</h3>
+    <p><b>Mikor használod?</b> Ha dolgokat kell összekapcsolnod párba. Pl. "Rendszám" -> "Autó objektum".</p>
+    <ul>
+        <li>A <b>Kulcsnak</b> teljesen egyedinek kell lennie. Az <b>Érték</b> lehet ugyanolyan.</li>
+        <li>A <code>.put(kulcs, ertek)</code> felülírja a korábbi értéket, ha a kulcs már létezett!</li>
+        <li>Primitív típusok (int, double, boolean) <b>TILOSAK</b> a gyémánt zárójelben! Helyette csomagoló osztályok kellenek: <code>Integer</code>, <code>Double</code>, <code>Boolean</code>.</li>
+    </ul>
+
+    <h2>3. A ZH LEGNAGYOBB "KÓDGYILKOS" HIBÁI</h2>
+
+    <div class="danger">
+        <h4>🚨 1. A Halálos "new List<>()" hiba</h4>
+        <p>Mivel a <code>List</code> egy interfész, **nem lehet közvetlenül példányosítani**! A jobb oldalon MINDIG <code>ArrayList</code> kell!</p>
+        <p>❌ <code>List&lt;BaseSpell&gt; lista = new List&lt;&gt;();</code> &nbsp; ➔ &nbsp; <i>Fordítási hiba!</i><br>
+           ✅ <code>List&lt;BaseSpell&gt; lista = new ArrayList&lt;&gt;();</code> &nbsp; ➔ &nbsp; <i>TÖKÉLETES!</i></p>
+    </div>
+
+    <div class="danger">
+        <h4>🚨 2. "asd[i]" vs "asd.get(i)" elcserélése</h4>
+        <p>Ha a függvény tömböt kapott, de te listaként kezeled, vagy fordítva, a Java azonnal elszáll:</p>
+        <p>Tömb esetén: ❌ <code>parts.get(2)</code> &nbsp; ➔ &nbsp; ✅ <code>parts[2]</code><br>
+           Lista esetén: ❌ <code>spells[idx]</code> &nbsp; ➔ &nbsp; ✅ <code>spells.get(idx)</code></p>
+    </div>
+
+    <div class="danger">
+        <h4>🚨 3. String tartalom összehasonlítása == jellel</h4>
+        <p>Parancsok értelmezésénél a <code>==</code> memóriacímet néz, a tartalomra <b>MINDIG</b> <code>.equals()</code> kell!</p>
+        <p>❌ <code>if (parancs == "cast")</code><br>
+           ✅ <code>if (parancs.equals("cast"))</code></p>
+    </div>
+
+    <div class="danger">
+        <h4>🚨 4. Értékadás egy függvényhívásnak kasztoláskor</h4>
+        <p>Nem adhatsz értéket egy <code>get()</code> metódusnak. A kasztolt objektumot külön változóba kell kimenteni!</p>
+        <p>❌ <code>this.spells.get(idx) = (ChainSpell) this.spells.get(idx);</code><br>
+           ✅ <code>ChainSpell cs = (ChainSpell) this.spells.get(idx);</code><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;<code>cs.setAuraColor(parts[2]);</code></p>
+    </div>
+
+    <h2>4. BEÉGETENDŐ SZENT GRÁL KÓDSABLONOK</h2>
+
+    <h3>Konstruktor: Tömb átpakolása ArrayList-be (List típussal)</h3>
+<pre><code>// Az adattag lehet sima List interfész típusú is!
+private final List&lt;BaseSpell&gt; spells;
+
+public MagicAcademy(BaseSpell[] bss) {
+    this.spells = new ArrayList&lt;&gt;(); // Példányosítani már ArrayList-tel kell!
+    for(BaseSpell bs : bss) {
+        this.spells.add(bs);
+    }
+}</code></pre>
+
+    <h3>Enkapszuláció (Lista biztonságos visszaadása getterben)</h3>
+    <div class="success">
+        <h4>Ha a feladat kéri: "ügyel az enkapszulációra / másolatot ad vissza":</h4>
+<pre><code>public List&lt;BaseSpell&gt; getLinkedSpells() {
+    // Új ArrayList-et gyártunk a belső listából, így nem tudnak belenyúlni kívülről
+    return new ArrayList&lt;&gt;(this.linkedSpells); 
+}</code></pre>
+    </div>
+
+    <h3>A Tökéletes Fájlbeolvasó Sablon (Scanner + StringBuilder)</h3>
+<pre><code>public String runFile(String filename) {
+    StringBuilder sb = new StringBuilder();
+    try {
+        Scanner scanner = new Scanner(new File(filename));
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            sb.append(runCommand(line)).append("\n"); // append-et használunk += helyett!
+        }
+        scanner.close();
+        return sb.toString();
+    } catch (FileNotFoundException e) {
+        return "File not found.";
+    }
+}</code></pre>
+
+</div>
+
+</body>
+</html>
