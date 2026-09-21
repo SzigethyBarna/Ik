@@ -1,0 +1,13 @@
+AGENT: HotelBooker
+STEP
+name=Kereses
+prompt=Keress egy hotelt Parizsban.
+systemPrompt=Te egy utazasi ugynok vagy.
+output=LIST_STRING
+ENDSTEP
+STEP
+name=Foglalas
+prompt=Foglald le az elso talalatot.
+systemPrompt=Te egy utazasi ugynok vagy.
+output=BOOLEAN
+ENDSTEP

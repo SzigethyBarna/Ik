@@ -1,0 +1,7 @@
+EGY ROSSZ FEJLEC: HotelBooker
+STEP
+name=Barmit
+prompt=Csinald
+systemPrompt=Te
+output=STRING
+ENDSTEP

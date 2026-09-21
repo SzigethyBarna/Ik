@@ -1,0 +1,13 @@
+AGENT: HibasDupla
+STEP
+name=Ugyanaz
+prompt=Prompt 1
+systemPrompt=SP 1
+output=INT
+ENDSTEP
+STEP
+name=Ugyanaz
+prompt=Prompt 2
+systemPrompt=SP 2
+output=BOOLEAN
+ENDSTEP
